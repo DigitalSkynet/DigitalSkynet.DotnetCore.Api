@@ -15,14 +15,13 @@ namespace DigitalSkynet.DotnetCore.Api.Controllers
             return Ok(result);
         }
 
-        public IActionResult ResponseModel<T>(T result) where T : class, new()
+        public IActionResult ResponseModel<T>(T result)
         {
             var response = new ResponseModel<T>(result);
             return JsonResult(response);
         }
 
         public IActionResult PagedResponse<TSummary, TPayload>(List<TPayload> payload, TSummary summary)
-        where TPayload : class, new()
         where TSummary : PayloadSummary
         {
             var result = new PagedResponseModel<TPayload, TSummary>(payload, summary);
