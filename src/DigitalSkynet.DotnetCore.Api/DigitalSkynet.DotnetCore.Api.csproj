@@ -1,11 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Company>Digital Skynet LLC</Company>
+    <Authors>Andrey Kurilo</Authors>
+    <PackageProjectUrl>https://github.com/DigitalSkynet/DigitalSkynet.DotnetCore.Api</PackageProjectUrl>
+    <Copyright>Copyright ©2019 Digital Skynet LLC</Copyright>
+    <Description>A generic repository wrapper library for dotnet core api</Description>
+    <Title>Digital Skynet Dotnet Core Api Middleware</Title>
+    <Summary>A generic repository wrapper library for dotnet core api</Summary>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryUrl>https://github.com/DigitalSkynet/DigitalSkynet.DotnetCore.Api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
-
 </Project>
