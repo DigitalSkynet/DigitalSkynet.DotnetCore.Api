@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace DigitalSkynet.DotnetCore.Api.Models
 {
     public class PagedResponseModel<TPayload, TSummary> : ResponseModel<List<TPayload>>
-        where TPayload : class, new()
+        where TPayload : class
     where TSummary : PayloadSummary
     {
         public PagedResponseModel(List<TPayload> items, TSummary summary) : this(items, summary, new List<Error>())

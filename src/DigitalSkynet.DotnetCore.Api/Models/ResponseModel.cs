@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace DigitalSkynet.DotnetCore.Api.Models
 {
-    public class ResponseModel<T> where T : class, new()
+    public class ResponseModel<T> where T : class
     {
         public ResponseModel(T payload) : this(payload, new List<Error>())
         { }
