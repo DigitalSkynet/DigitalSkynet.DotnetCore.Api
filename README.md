@@ -5,6 +5,11 @@ The package contains implementation of base controllers, response payload models
 ## Usage
 
 ```java
+// Bind ILogErrorsService to your custom implementation
+services.AddScoped<ILogErrorsService, MyLoggerService>();
+```
+
+```java
 using DigitalSkynet.DotnetCore.Api.Controllers;
 
 public class DashboardController : BaseServiceController<IDashboardService>
