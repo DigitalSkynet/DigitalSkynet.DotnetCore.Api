@@ -1,0 +1,66 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "test with lcov coverage",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/src/DigitalSkynet.DotnetCore.Tests/DigitalSkynet.DotnetCore.Tests.csproj",
+                "/p:CollectCoverage=true",
+                "/p:CoverletOutputFormat=\"opencover,lcov\"",
+                "/p:CoverletOutput=../lcov/"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "test with coverlet",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "/p:CollectCoverage=true  /p:CoverletOutput=../CoverageResults/ /p:MergeWith=\"../CoverageResults/coverage.json\" /p:CoverletOutputFormat=\"opencover,json\" -m:1",
+                "${workspaceFolder}/src/DigitalSkynet.DotnetCore.Tests/DigitalSkynet.DotnetCore.Tests.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/DigitalSkynet.DotnetCore.Tests/DigitalSkynet.DotnetCore.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/DigitalSkynet.DotnetCore.Tests/DigitalSkynet.DotnetCore.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/src/DigitalSkynet.DotnetCore.Tests/DigitalSkynet.DotnetCore.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
