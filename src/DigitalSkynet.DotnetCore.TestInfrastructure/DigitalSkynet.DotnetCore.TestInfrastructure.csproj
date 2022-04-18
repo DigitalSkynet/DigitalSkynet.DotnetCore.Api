@@ -1,4 +1,5 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -6,17 +7,14 @@
     <Authors>DSNCI ᵀᴹ</Authors>
     <PackageProjectUrl>https://github.com/DigitalSkynet/DigitalSkynet.DotnetCore.Api</PackageProjectUrl>
     <Copyright>Copyright ©2022 Digital Skynet Inc</Copyright>
-    <Description>A generic controllers and exceptions handling</Description>
-    <Title>Digital Skynet Dotnet Core Api Middleware</Title>
-    <Summary>A generic controllers and exceptions handling</Summary>
+    <Description>Test ifrasturture to build unit tests easily</Description>
+    <Title>Digital Skynet Dotnet Core Test Infrastructure</Title>
+    <Summary>Test ifrasturture to build unit tests easily</Summary>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryUrl>https://github.com/DigitalSkynet/DigitalSkynet.DotnetCore.Api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IsPackable>true</IsPackable>
-    <ApplicationIcon />
-    <OutputType>Library</OutputType>
-    <StartupObject />
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
@@ -26,7 +24,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DigitalSkynet.DotnetCore.DataStructures\DigitalSkynet.DotnetCore.DataStructures.csproj" />
-    <ProjectReference Include="..\DigitalSkynet.DotnetCore.Helpers\DigitalSkynet.DotnetCore.Helpers.csproj" />
+    <PackageReference Include="AutoMapper" Version="11.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
+
 </Project>

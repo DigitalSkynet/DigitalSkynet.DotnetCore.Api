@@ -1,2 +1,5 @@
-src/DigitalSkynet.DotnetCore.Api/bin
-src/DigitalSkynet.DotnetCore.Api/obj
+**/bin
+**/obj
+build/
+**/.DS_Store
+src/lcov/
